@@ -1,4 +1,4 @@
-let currentMeme = 493;
+let currentMeme = 492;
 //change this
 
 const forward = document.getElementById("forward");

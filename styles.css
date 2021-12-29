@@ -58,6 +58,7 @@ body {
 }
 
 .header h1 {
+    size: 3em;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
