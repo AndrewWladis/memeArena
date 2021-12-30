@@ -43,6 +43,10 @@ form {
     align-items: center;
 }
 
+form div {
+    padding: 1%;
+}
+
 form label {
     font-family: 'Poppins', sans-serif;
     color: rgb(74, 74, 248);
