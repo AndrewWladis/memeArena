@@ -8,6 +8,8 @@ const meme = document.getElementById("meme");
 const memeNumHtml = document.getElementById("memeNumber");
 const random = document.getElementById("randButton");
 
+let memes = [];
+
 forward.addEventListener("click", nextMeme);
 backward.addEventListener("click", backMeme);
 random.addEventListener("click", randomMeme)
@@ -61,6 +63,15 @@ function preloadImages(array) {
     }
 }
 
-preloadImages([`memes/main/${currentMeme}.jpeg`, `memes/main/${currentMeme - 1}.jpeg`, `memes/main/${currentMeme - 2}.jpeg`, `memes/main/${currentMeme - 3}.jpeg`, `memes/main/${currentMeme - 4}.jpeg`]);
+function memeArrayReady() {
+    for (let i = 0; i < amount; i++) {
+        memes.push(`memes/main/${currentMeme - 1}.jpeg`)
+        console.log(memes)
+    }
+}
+
+memeArrayReady()
+
+preloadImages(memes);
 
 updateMeme()
