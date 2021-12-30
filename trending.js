@@ -1,5 +1,5 @@
-const amount = 40;
-let currentMeme = 40;
+const amount = 7;
+let currentMeme = 0;
 //change this
 
 const forward = document.getElementById("forward");
@@ -13,7 +13,7 @@ forward.addEventListener("click", nextMeme);
 backward.addEventListener("click", backMeme);
 
 function updateMeme() {
-    meme.src = `memes/spiderman/${currentMeme}.jpeg`;
+    meme.src = `memes/trending/${currentMeme}.jpeg`;
     memeNumHtml.innerText = currentMeme;
     if (currentMeme >= amount) {
         forward.style.opacity = '0%';

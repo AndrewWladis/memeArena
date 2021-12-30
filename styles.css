@@ -36,9 +36,26 @@ body {
     background-color: rgb(0, 0, 0);
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form label {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(74, 74, 248);
+}
+
 .controlRow {
     display: flex;
     flex-direction: row;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
 }
 
 .controlRow h1 {
@@ -58,7 +75,6 @@ body {
 }
 
 .header h1 {
-    size: 3em;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
@@ -76,6 +92,12 @@ body {
     transform: scaleX(-1);
 }
 
+#formText {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(74, 74, 248);
+    text-decoration: underline;
+}
+
 #forward {
     max-height: 30px; 
     max-width: 30px;
@@ -85,3 +107,23 @@ body {
     padding-top: 10px;
     padding-bottom: 10px;
 } 
+
+#memeNumber {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(74, 74, 248);
+}
+
+#memeRand {
+    padding-top: 10px;
+    padding-bottom: 10px;
+} 
+
+#randButton {
+    font-family: 'Poppins', sans-serif;
+    color: rgb(74, 74, 248);
+}
+
+#warning {
+    color: rgb(250, 53, 53);
+    font-family: 'Poppins', sans-serif;
+}

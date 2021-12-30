@@ -19,10 +19,33 @@
         <img src="" id="meme">
         <div class="controlRow">
             <img src="arrow.png" id="forward" alt="arrow">
-            <h1 id="memeNumber" style="color: rgb(74, 74, 248);">1</h1>
+            <h1 id="memeNumber">1</h1>
             <img src="arrow.png" id="backward" alt="arrow">
         </div>
+        <div class="controlRow">
+            <h2 id="randButton">Click Here For A Random Meme</h2>
+        </div>
     </div>
+    <form action="https://formspree.io/f/xbjwlobl" method="POST" enctype="multipart/form-data">
+        <h2 id="formText">Feedback</h2>
+        <label>
+            Your Name:
+            <input type="name" name="_replyto" placeholder="name">
+        </label>
+        <label>
+            Your email:
+            <input type="email" name="_replyto" placeholder="email">
+        </label>
+        <label>
+            Feedback:
+            <input type="text" name="_replyto" placeholder="feedback">
+        </label>
+        <label>
+            A Meme You Would Like To Submit (only jpegs please) (optional):
+            <input type="file" name="upload">
+        </label>
+        <button type="submit">Send</button>
+</form>
 </body>
 <script src="hub.js"></script>
 </html>
