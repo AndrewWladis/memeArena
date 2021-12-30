@@ -1,4 +1,4 @@
-const amount = 7;
+const amount = 5;
 let currentMeme = 0;
 //change this
 
