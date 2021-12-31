@@ -1,16 +1,18 @@
-const amount = 43;
-let currentMeme = 43;
+const amount = 52;
+let currentMeme = 52;
 //change this
 
 const forward = document.getElementById("forward");
 const backward = document.getElementById("backward");
 const meme = document.getElementById("meme");
 const memeNumHtml = document.getElementById("memeNumber");
+const random = document.getElementById("randButton");
 
-updateMeme()
+let memes = [];
 
 forward.addEventListener("click", nextMeme);
 backward.addEventListener("click", backMeme);
+random.addEventListener("click", randomMeme)
 
 function updateMeme() {
     meme.src = `memes/spiderman/${currentMeme}.jpeg`;
@@ -34,5 +36,42 @@ function backMeme() {
     currentMeme -= 1;
     updateMeme()
 }
+
+function randomMeme() {
+    let randomNum = Math.floor(Math.random() * amount);
+    currentMeme = randomNum;
+    updateMeme()
+}
+
+function preloadImages(array) {
+    if (!preloadImages.list) {
+        preloadImages.list = [];
+    }
+    var list = preloadImages.list;
+    for (var i = 0; i < array.length; i++) {
+        var img = new Image();
+        img.onload = function() {
+            var index = list.indexOf(this);
+            if (index !== -1) {
+                // remove image from the array once it's loaded
+                // for memory consumption reasons
+                list.splice(index, 1);
+            }
+        }
+        list.push(img);
+        img.src = array[i];
+    }
+}
+
+function memeArrayReady() {
+    for (let i = 0; i < amount; i++) {
+        memes.push(`memes/spiderman/${currentMeme - 1}.jpeg`)
+        console.log(memes)
+    }
+}
+
+memeArrayReady()
+
+preloadImages(memes);
 
 updateMeme()
