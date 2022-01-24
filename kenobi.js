@@ -1,5 +1,5 @@
-const amount = 135;
-let currentMeme = 135;
+const amount = 142;
+let currentMeme = 142;
 //change this
 
 const forward = document.getElementById("forward");
